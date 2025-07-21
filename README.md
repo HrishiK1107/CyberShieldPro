@@ -25,8 +25,7 @@ This project demonstrates **mastery of the most in-demand cybersecurity skills f
 
 **🔗 [Try the Live Application](https://cybershield-pro-demo.com)** _(Interactive demo showcasing all modules)_
 
-![CyberShield Pro Dashboard](./assets
-/cybersecurity_skills_growth.png)
+![CyberShield Pro Dashboard](./assets/cybersecurity_skills_growth.png)
 
 ---
 
