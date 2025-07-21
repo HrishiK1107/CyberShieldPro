@@ -1,0 +1,60 @@
+{
+  "Most_In_Demand_Skills": [
+    {
+      "Skill": "AI-Powered Cybersecurity",
+      "Demand_Level": "Critical",
+      "Growth_Rate": "185%",
+      "Avg_Salary_Increase": "35%",
+      "Description": "AI for threat detection, automated incident response, ML-based vulnerability discovery"
+    },
+    {
+      "Skill": "Cloud Security (AWS/Azure/GCP)",
+      "Demand_Level": "Critical",
+      "Growth_Rate": "156%",
+      "Avg_Salary_Increase": "32%",
+      "Description": "Securing cloud infrastructure, IAM, container security, serverless security"
+    },
+    {
+      "Skill": "Zero Trust Architecture",
+      "Demand_Level": "Critical",
+      "Growth_Rate": "143%",
+      "Avg_Salary_Increase": "30%",
+      "Description": "Identity verification, continuous monitoring, least privilege access"
+    },
+    {
+      "Skill": "Penetration Testing & Red Teaming",
+      "Demand_Level": "High",
+      "Growth_Rate": "127%",
+      "Avg_Salary_Increase": "28%",
+      "Description": "Advanced red team operations, MITRE ATT&CK framework, threat emulation"
+    },
+    {
+      "Skill": "Incident Response & Digital Forensics",
+      "Demand_Level": "High",
+      "Growth_Rate": "118%",
+      "Avg_Salary_Increase": "26%",
+      "Description": "DFIR, threat hunting, malware analysis, forensic investigation"
+    },
+    {
+      "Skill": "DevSecOps & Application Security",
+      "Demand_Level": "High",
+      "Growth_Rate": "112%",
+      "Avg_Salary_Increase": "24%",
+      "Description": "Secure coding, SAST/DAST, CI/CD security integration"
+    },
+    {
+      "Skill": "IoT & Embedded Security",
+      "Demand_Level": "Medium-High",
+      "Growth_Rate": "98%",
+      "Avg_Salary_Increase": "22%",
+      "Description": "Hardware security, firmware analysis, wireless protocol security"
+    }
+  ],
+  "Market_Stats": {
+    "Global_Cybersecurity_Job_Openings": 457398,
+    "Worker_to_Job_Ratio": "83:100",
+    "Skills_Gap_Increase": "8%",
+    "Avg_Time_to_Fill_Position": "21% longer than other IT roles",
+    "Companies_Removing_Degree_Requirements": "45%"
+  }
+}
