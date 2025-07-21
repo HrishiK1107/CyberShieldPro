@@ -21,11 +21,17 @@ This project demonstrates **mastery of the most in-demand cybersecurity skills f
 
 ---
 
-## 🎥 **Live Demo**
+## 🎥 **Demo**
 
-**🔗 [Try the Live Application](https://cybershield-pro-demo.com)** _(Interactive demo showcasing all modules)_
 
-![CyberShield Pro Dashboard](./assets/cybersecurity_skills_growth.png)
+![CyberShield Pro Dashboard](./assets/Dashboard.png)
+![CyberShield Pro Dashboard](./assets/AI_Threat_Intelligence.png)
+![CyberShield Pro Dashboard](./assets/Pentration_Testing_suite.png)
+![CyberShield Pro Dashboard](./assets/Red_Team_Ops.png)
+![CyberShield Pro Dashboard](./assets/ML_Analytics.png)
+![CyberShield Pro Dashboard](./assets/Cloud_Security.png)
+![CyberShield Pro Dashboard](./assets/Digitial_Forensics_and_Incidence_Response.png)
+
 
 ---
 
@@ -151,7 +157,6 @@ class ZeroDayPredictor:
 - Comprehensive reporting with executive summaries
 
 ### **🎯 Red Team Operations Center**
-![MITRE ATT&CK Integration](./assets/mitre-attack-mapping.png)
 
 **Features:**
 - **Complete MITRE ATT&CK framework** integration and automation
