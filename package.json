@@ -23,19 +23,19 @@
     "portfolio-project"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "your.email@domain.com",
-    "url": "https://yourportfolio.com"
+    "name": "Hrishikesh Kanapuram",
+    "email": "hkanapuram@gmail.com",
+  
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/cybershield-pro.git"
+    "url": "https://github.com/HrishiK1107/cybershield-pro.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/cybershield-pro/issues"
+    "url": "https://github.com/HrishiK1107/cybershield-pro/issues"
   },
-  "homepage": "https://github.com/yourusername/cybershield-pro#readme",
+  "homepage": "https://github.com/HrishiK1107/cybershield-pro#readme",
   "devDependencies": {
     "live-server": "^1.2.2"
   },
