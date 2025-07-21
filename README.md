@@ -403,7 +403,6 @@ This software is intended for authorized security testing and educational purpos
 ## 🙋‍♂️ **Contact & Support**
 
 - **📧 Email**: hkanapuram@gmail.com
-- **💼 LinkedIn**: [Your LinkedIn Profile](www.linkedin.com/in/hrishikesh-kanapuram-658b5732b)
 
 ---
 
