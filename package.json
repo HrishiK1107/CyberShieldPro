@@ -1,0 +1,46 @@
+{
+  "name": "cybershield-pro",
+  "version": "1.0.0",
+  "description": "AI-Powered Advanced Penetration Testing Framework - Enterprise-grade cybersecurity platform combining AI threat intelligence with automated security assessment tools",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=localhost",
+    "dev": "live-server --port=3000 --host=localhost --watch=css,js",
+    "build": "echo 'Static site - no build step required'",
+    "test": "echo 'Tests will be added in future versions'"
+  },
+  "keywords": [
+    "cybersecurity",
+    "penetration-testing",
+    "ai",
+    "machine-learning",
+    "security-tools",
+    "red-team",
+    "vulnerability-assessment",
+    "threat-intelligence",
+    "cloud-security",
+    "digital-forensics",
+    "portfolio-project"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@domain.com",
+    "url": "https://yourportfolio.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cybershield-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cybershield-pro/issues"
+  },
+  "homepage": "https://github.com/yourusername/cybershield-pro#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
