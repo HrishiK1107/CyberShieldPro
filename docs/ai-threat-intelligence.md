@@ -14,12 +14,6 @@ CyberShield Pro’s Threat Intel engine fuses supervised and unsupervised ML mod
 2. **Enrichment** – tags assets with MITRE ATT&CK metadata via STIX-2.1 objects[3].  
 3. **Model staging** – TensorFlow 2.14 models live-reload through TF Serving.  
 
-## 3  APIs
-from threat_intel import IntelEngine
-intel = IntelEngine(cache_ttl=3600)
-intel.predict_threat(sample_log_json)
-*Returns a dict: `{ 'threat_score':0.82, 'primary_tactic':'Credential Access' }`.*
-
-## 4  Accuracy Tuning
+## 3 Accuracy Tuning
 * Re-train weekly with the latest CTI.  
 * Monitor **ROC-AUC ≥ 0.93** to limit false positives ≤ 3 %[4].  
