@@ -365,9 +365,6 @@ reporting:
 
 ---
 
-## 🤝 **Contributing**
-
-We welcome contributions from the cybersecurity community! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ### **Development Setup**
 ```bash
@@ -400,22 +397,8 @@ This software is intended for authorized security testing and educational purpos
 
 ## 🙋‍♂️ **Contact & Support**
 
-- **📧 Email**: cybershield@yourname.com
-- **💼 LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **🐱 GitHub**: [@yourusername](https://github.com/yourusername)
-- **🌐 Portfolio**: [yourname.dev](https://yourname.dev)
-
----
-
-## 🏅 **Certifications & Credentials**
-
-This project aligns with and demonstrates knowledge of:
-- **OSCP** (Offensive Security Certified Professional)
-- **CISSP** (Certified Information Systems Security Professional)
-- **CEH** (Certified Ethical Hacker)
-- **GCIH** (GIAC Certified Incident Handler)
-- **AWS Security Specialty** Certification
-- **Azure Security Engineer** Certification
+- **📧 Email**: hkanapuram@gmail.com
+- **💼 LinkedIn**: [Your LinkedIn Profile](www.linkedin.com/in/hrishikesh-kanapuram-658b5732b)
 
 ---
 
